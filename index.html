@@ -261,45 +261,58 @@
 
         <!-- BENEFITS / FACTS VIEW -->
         <section id="view-facts" class="hidden space-y-8 fade-up">
-            <div class="text-center">
-                <h2 class="text-3xl font-bold">The <span class="text-farm-gold">Amaj'ta</span> Difference</h2>
-                <p class="text-gray-400 text-sm mt-2">Real benefits of choosing pure, traditionally made ghee</p>
-            </div>
-            
-            <div class="flex bg-white/5 p-1 rounded-full max-w-sm mx-auto">
-                <button onclick="updateCharts('growth')" id="btn-growth" 
-                        class="flex-1 bg-farm-gold text-farm-dark font-bold py-2.5 rounded-full text-xs transition-all">Nutrient Profile</button>
-                <button onclick="updateCharts('survival')" id="btn-survival" 
-                        class="flex-1 text-gray-400 font-bold py-2.5 rounded-full text-xs transition-all">Quality Scores</button>
-            </div>
-            
-            <div class="grid md:grid-cols-2 gap-6">
-                <!-- Nutrient Chart -->
-                <div class="glass-card rounded-3xl p-6">
-                    <h3 class="text-sm font-bold mb-6 flex items-center gap-2">
-                        <span class="w-2 h-6 bg-farm-gold rounded-full"></span> 
-                        Nutrient Comparison (per 100g)
-                    </h3>
-                    <div class="h-64"><canvas id="macroChart"></canvas></div>
-                </div>
-                
-                <!-- Quality Chart -->
-                <div class="glass-card rounded-3xl p-6">
-                    <h3 class="text-sm font-bold mb-6 flex items-center gap-2">
-                        <span class="w-2 h-6 bg-farm-accent rounded-full"></span> 
-                        Purity &amp; Health Scores (%)
-                    </h3>
-                    <div class="h-64"><canvas id="mineralChart"></canvas></div>
-                </div>
-            </div>
-            
-            <div class="bg-farm-surface p-6 rounded-2xl border border-farm-gold/20">
-                <h4 class="text-lg font-bold text-farm-gold mb-2 flex items-center gap-2">
-                    <i class="fa-solid fa-lightbulb"></i> Did You Know?
-                </h4>
-                <p id="fact-text" class="text-sm text-gray-300">Amaj'ta Ghee contains up to 4× more beneficial nutrients like CLA and butyric acid than standard processed alternatives.</p>
-            </div>
-        </section>
+    <div class="text-center">
+        <h2 class="text-3xl font-bold">The <span class="text-farm-gold">Amaj'ta</span> Difference</h2>
+        <p class="text-gray-400 text-sm mt-2">Real benefits of choosing pure, traditionally made ghee</p>
+    </div>
+    <div class="text-center pt-2">
+        <button onclick="switchView('home')" 
+                class="inline-flex items-center gap-2 px-5 py-2.5 text-sm font-medium text-yellow-300 hover:text-white border border-white/20 hover:border-farm-gold/60 rounded-full transition-all active:scale-95">
+            <i class="fa-solid fa-arrow-left text-xs"></i>
+            <span>Back to Home</span>
+        </button>
+    </div>
+    
+    <!-- Toggle Buttons -->
+    <div class="flex bg-white/5 p-1 rounded-full max-w-sm mx-auto">
+        <button onclick="updateCharts('growth')" id="btn-growth"
+                class="flex-1 bg-farm-gold text-farm-dark font-bold py-2.5 rounded-full text-xs transition-all">Nutrient Profile</button>
+        <button onclick="updateCharts('survival')" id="btn-survival"
+                class="flex-1 text-gray-400 font-bold py-2.5 rounded-full text-xs transition-all">Quality Scores</button>
+    </div>
+    
+    <!-- Charts -->
+    <div class="grid md:grid-cols-2 gap-6">
+        <!-- Nutrient Chart -->
+        <div class="glass-card rounded-3xl p-6">
+            <h3 class="text-sm font-bold mb-6 flex items-center gap-2">
+                <span class="w-2 h-6 bg-farm-gold rounded-full"></span>
+                Nutrient Comparison (per 100g)
+            </h3>
+            <div class="h-64"><canvas id="macroChart"></canvas></div>
+        </div>
+        
+        <!-- Quality Chart -->
+        <div class="glass-card rounded-3xl p-6">
+            <h3 class="text-sm font-bold mb-6 flex items-center gap-2">
+                <span class="w-2 h-6 bg-farm-accent rounded-full"></span>
+                Purity &amp; Health Scores (%)
+            </h3>
+            <div class="h-64"><canvas id="mineralChart"></canvas></div>
+        </div>
+    </div>
+    
+    <!-- Did You Know? -->
+    <div class="bg-farm-surface p-6 rounded-2xl border border-farm-gold/20">
+        <h4 class="text-lg font-bold text-farm-gold mb-2 flex items-center gap-2">
+            <i class="fa-solid fa-lightbulb"></i> Did You Know?
+        </h4>
+        <p id="fact-text" class="text-sm text-gray-300">Amaj'ta Ghee contains up to 4× more beneficial nutrients like CLA and butyric acid than standard processed alternatives.</p>
+    </div>
+    
+    <!-- Back to Home Button -->
+    
+</section>
         
         <!-- ORDER CALCULATOR -->
         <section id="profit-calculator" class="fade-up space-y-8 mt-16">
@@ -396,7 +409,7 @@
                 <h2 id="modal-title" class="text-xl font-bold text-white mb-3">Product Details</h2>
                 
                 <div class="w-full h-36 bg-farm-surface/50 rounded-2xl mb-3 overflow-hidden border border-white/10">
-                    <img id="modal-image" src="https://picsum.photos/id/1080/600/400" alt="Amaj'ta Natural Ghee"
+                    <img id="modal-image" src="hero2.jpg" alt="Amaj'ta Natural Ghee"
                          class="w-full h-full object-cover">
                 </div>
                 
@@ -447,7 +460,7 @@
         <span class="relative flex items-center justify-center">
             <i class="fa-solid fa-phone text-farm-gold text-base relative z-10"></i>
             <!-- Subtle ping on phone icon -->
-            <span class="absolute inline-flex h-4 w-4 rounded-full bg-farm-gold opacity-40 animate-ping"></span>
+            <span class="absolute -top-1 -right-1 flex h-3 w-3 rounded-full bg-farm-gold opacity-40 animate-ping"></span>
         </span>
         <span>Or call <a href="tel:+256700690045" class="text-farm-gold hover:underline font-medium">0700 690 045</a></span>
     </div>
@@ -483,7 +496,7 @@
                 title: "1 KG Natural Ghee",
                 tagline: "Family Size • Best Value",
                 tag: "MOST POPULAR",
-                image: "https://picsum.photos/id/1080/600/400",
+                image: "hero2.jpg",
                 stats: ["100% Pure", "Traditional", "Nutrient Rich"],
                 desc: "Our signature full-size jar. Handcrafted from premium Ugandan cream using traditional methods passed down through generations. Perfect for daily cooking, baking, and wellness rituals. Rich in natural vitamins, CLA, and butyric acid.",
                 ingredients: "100% Cow's Milk Ghee • No additives • No preservatives • No vegetable oils"
@@ -492,7 +505,7 @@
                 title: "½ KG Natural Ghee",
                 tagline: "Starter • Gift Pack",
                 tag: "PERFECT GIFT",
-                image: "https://picsum.photos/id/292/600/400",
+                image: "hero2.jpg",
                 stats: ["Same Premium Quality", "Travel Friendly", "Great for Gifting"],
                 desc: "The perfect introduction to pure traditional ghee or a thoughtful gift for health-conscious loved ones. Same authentic quality and traditional craftsmanship in a convenient, portable size. Ideal for first-time buyers or travel.",
                 ingredients: "100% Cow's Milk Ghee • No additives • No preservatives • No vegetable oils"
