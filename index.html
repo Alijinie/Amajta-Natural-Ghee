@@ -176,31 +176,49 @@
         <h2 class="text-2xl font-bold text-farm-accent">Choose from 2 Available Sizes</h2>
         <p class="text-green-500 text-sm mt-1">Order now for Delivery</p>
     </div>
+    <div class="flex items-center gap-3 bg-collina-blue/10 px-5 py-2.5 rounded-full border border-collina-blue/20">
+        <div class=" md:hidden text-white w-6 h-6 rounded-full flex items-center justify-center">
+            <i class="fa-solid fa-arrow-down text-xs animate-bounce"></i>
+        </div>
+        <span class="text-collina-yellow font-bold text-sm tracking-wide">Select your preferred pack</span>
+        <div class="bg-collina-blue text-white w-6 h-6 rounded-full flex items-center justify-center">
+            <i class="fa-solid fa-arrow-down text-xs animate-bounce"></i>
+        </div>
+    </div>
             <!-- PRODUCTS GRID -->
             <div id="products-grid" class="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <!-- 1KG Card -->
                 <article onclick="openProduct(0)" class="group glass-card rounded-2xl p-6 cursor-pointer hover:-translate-y-2 transition-all border border-farm-gold/10 hover:border-farm-gold/30">
-                    <div class="flex justify-between items-start mb-4">
-                        <div>
-                            <h3 class="text-2xl font-bold">1 KG Jar</h3>
-                            <p class="text-farm-gold text-sm font-medium">Family Size • Best Value</p>
-                        </div>
-                        <span class="bg-farm-gold/20 text-farm-gold text-[10px] px-3 py-1 rounded-full font-bold">MOST POPULAR</span>
-                    </div>
-                    
-                    <div class="flex items-baseline mb-4">
-                        <span class="text-4xl font-black text-white">UGX 30,000</span>
-                        <span class="ml-2 text-xs text-gray-500">/ jar</span>
-                    </div>
-                    
-                    <p class="text-gray-400 text-sm mb-5">Our signature full-size jar. Perfect for daily cooking, baking, Ayurvedic rituals and family wellness. Lasts 4–6 weeks for most households.</p>
-                    
-                    <div class="flex flex-wrap gap-2">
-                        <span class="text-[10px] bg-white/5 px-3 py-1 rounded">100% Pure</span>
-                        <span class="text-[10px] bg-white/5 px-3 py-1 rounded">Traditional Method</span>
-                        <span class="text-[10px] bg-white/5 px-3 py-1 rounded">Nutrient Dense</span>
-                    </div>
-                </article>
+    <div class="flex justify-between items-start mb-4">
+        <div>
+            <h3 class="text-2xl font-bold">1 KG Jar</h3>
+            <p class="text-farm-gold text-sm font-medium">Family Size • Best Value</p>
+        </div>
+        
+        <div class="relative">
+            <span class="bg-farm-gold/20 text-farm-gold text-[10px] px-2 py-1 rounded-full font-bold">
+                MOST POPULAR
+            </span>
+            <span class="absolute -top-1 -right-1 flex h-2.5 w-2.5">
+                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-500 opacity-75"></span>
+                <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-green-500"></span>
+            </span>
+        </div>
+    </div>
+    
+    <div class="flex items-baseline mb-4">
+        <span class="text-4xl font-black text-white">UGX 30,000</span>
+        <span class="ml-2 text-xs text-gray-500">/ jar</span>
+    </div>
+    
+    <p class="text-gray-400 text-sm mb-5">Our signature full-size jar. Perfect for daily cooking, baking, Ayurvedic rituals and family wellness. Lasts 4–6 weeks for most households.</p>
+    
+    <div class="flex flex-wrap gap-2">
+        <span class="text-[10px] bg-white/5 px-3 py-1 rounded">100% Pure</span>
+        <span class="text-[10px] bg-white/5 px-3 py-1 rounded">Traditional Method</span>
+        <span class="text-[10px] bg-white/5 px-3 py-1 rounded">Nutrient Dense</span>
+    </div>
+</article>
 
                 <!-- ½KG Card -->
                 <article onclick="openProduct(1)" class="group glass-card rounded-2xl p-6 cursor-pointer hover:-translate-y-2 transition-all border border-farm-gold/10 hover:border-farm-gold/30">
@@ -209,7 +227,13 @@
                             <h3 class="text-2xl font-bold">½ KG Jar</h3>
                             <p class="text-farm-gold text-sm font-medium">Starter • Gift Pack</p>
                         </div>
+                        <div class="relative">
                         <span class="bg-orange-500/20 text-orange-400 text-[10px] px-3 py-1 rounded-full font-bold">PERFECT GIFT</span>
+                        <span class="absolute -top-1 -right-1 flex h-2.5 w-2.5">
+                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-500 opacity-75"></span>
+                <span class="relative inline-flex rounded-full h-2.5 w-3 bg-green-500"></span>
+            </span>
+                        </div>
                     </div>
                     
                     <div class="flex items-baseline mb-4">
@@ -359,52 +383,80 @@
 
     <!-- PRODUCT MODAL -->
     <div id="product-modal" class="fixed inset-0 bg-black/80 hidden flex items-center justify-center z-50 px-4" onclick="closeModal(event)">
-        <div class="bg-farm-dark rounded-3xl p-8 max-w-md w-full border border-farm-gold/50 shadow-2xl animate-fadeIn relative">
-            <button onclick="closeModal()" class="close-btn absolute top-6 right-6 text-gray-400 hover:text-farm-gold text-3xl leading-none">&times;</button>
+    <div class="bg-farm-dark rounded-3xl p-5 max-w-md w-full border border-farm-gold/50 shadow-2xl animate-fadeIn relative">
+        
+        <!-- Close button -->
+        <button onclick="closeModal()" 
+                class="close-btn absolute top-4 right-4 text-gray-400 hover:text-farm-gold text-3xl leading-none z-10">&times;</button>
+        
+        <div class="space-y-4">
             
-            <div class="space-y-6">
-                <div class="text-center">
-                    <h2 id="modal-title" class="text-2xl font-bold text-white mb-4">Product Details</h2>
-                    
-                    <div class="w-full h-48 bg-farm-surface/50 rounded-2xl mb-4 overflow-hidden border border-white/10">
-                        <img id="modal-image" src="https://picsum.photos/id/1080/600/400" alt="Amaj'ta Natural Ghee" 
-                             class="w-full h-full object-cover">
-                    </div>
-                    
-                    <p id="modal-desc" class="text-gray-300 text-sm leading-relaxed"></p>
+            <!-- Header + Image + Description -->
+            <div class="text-center">
+                <h2 id="modal-title" class="text-xl font-bold text-white mb-3">Product Details</h2>
+                
+                <div class="w-full h-36 bg-farm-surface/50 rounded-2xl mb-3 overflow-hidden border border-white/10">
+                    <img id="modal-image" src="https://picsum.photos/id/1080/600/400" alt="Amaj'ta Natural Ghee"
+                         class="w-full h-full object-cover">
                 </div>
                 
-                <div class="border-t border-farm-gold/20 pt-6">
-                    <h3 class="text-white font-bold mb-4 text-lg">Place Your Order</h3>
-                    
-                    <div class="space-y-5">
-                        <div>
-                            <label class="text-[10px] text-gray-400 uppercase font-bold tracking-wider">How many jars?</label>
-                            <input type="number" id="order-qty" placeholder="e.g. 2" min="1"
-                                   class="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 mt-1 text-white focus:border-farm-gold focus:ring-2 focus:ring-farm-gold/30 outline-none transition-all">
-                        </div>
-                        
-                        <div>
-                            <label class="text-[10px] text-gray-400 uppercase font-bold tracking-wider">Delivery or Pickup Location</label>
-                            <input type="text" id="order-location" placeholder="e.g. Nakawa, Entebbe, Kololo..." 
-                                   class="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 mt-1 text-white focus:border-farm-gold focus:ring-2 focus:ring-farm-gold/30 outline-none transition-all">
-                            <p class="text-[10px] text-emerald-400 mt-1">Free delivery above UGX 100k • Pickup at Volcano Coffee, Nakawa</p>
-                        </div>
+                <p id="modal-desc" class="text-gray-300 text-sm leading-snug"></p>
+            </div>
+            
+            <!-- Order Section -->
+            <div class="border-t border-farm-gold/20 pt-4">
+                <h3 class="text-white font-bold mb-3 text-base">Place Your Order</h3>
+                
+                <div class="space-y-4">
+                    <!-- Quantity -->
+                    <div>
+                        <label class="text-[10px] text-gray-400 uppercase font-bold tracking-wider">How many jars?</label>
+                        <input type="number" id="order-qty" placeholder="e.g. 2" min="1"
+                               class="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-2.5 mt-1 text-white focus:border-farm-gold focus:ring-2 focus:ring-farm-gold/30 outline-none transition-all">
                     </div>
                     
-                    <button onclick="sendWhatsAppOrder()"
-                            class="w-full mt-8 bg-gradient-to-r from-farm-gold to-yellow-400 text-farm-dark font-bold py-4 rounded-xl flex items-center justify-center gap-3 hover:shadow-[0_0_30px_rgba(201,162,39,0.5)] transition-all transform hover:scale-105">
-                        <i class="fa-brands fa-whatsapp text-xl"></i>
-                        Send Order via WhatsApp
-                    </button>
-                    
-                    <div class="text-center mt-4">
-                        <p class="text-[10px] text-gray-500">Or call <a href="tel:+256700690045" class="text-farm-gold hover:underline">0700 690 045</a></p>
+                    <!-- Location -->
+                    <div>
+                        <label class="text-[10px] text-gray-400 uppercase font-bold tracking-wider">Delivery or Pickup Location</label>
+                        <input type="text" id="order-location" placeholder="e.g. Nakawa, Entebbe, Kololo..."
+                               class="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-2.5 mt-1 text-white focus:border-farm-gold focus:ring-2 focus:ring-farm-gold/30 outline-none transition-all">
+                        <p class="text-[10px] text-emerald-400 mt-1">Free delivery above UGX 100k • Pickup at Volcano Coffee, Nakawa</p>
                     </div>
                 </div>
+                
+                <!-- WhatsApp Button -->
+                <!-- WhatsApp Button with Ping Animation -->
+<button onclick="sendWhatsAppOrder()"
+        class="w-full mt-5 bg-gradient-to-r from-farm-gold to-yellow-400 text-farm-dark font-bold py-4 rounded-2xl flex items-center justify-center gap-3 
+               shadow-[0_10px_30px_-10px_rgb(201,162,39)] 
+               hover:shadow-[0_0_40px_rgba(201,162,39,0.6)] 
+               active:scale-[0.985] transition-all duration-200">
+    
+    <span class="relative flex items-center justify-center">
+        <!-- Ping animation -->
+        <span class="absolute inline-flex h-7 w-7 rounded-full bg-emerald-400 opacity-60 animate-ping"></span>
+        <i class="fa-brands fa-whatsapp text-2xl relative z-10"></i>
+    </span>
+    
+    <span>Send Order via WhatsApp</span>
+</button>
+
+<!-- Phone Option -->
+<div class="text-center mt-3.5">
+    <div class="inline-flex items-center gap-2 text-[10px] text-gray-400">
+        <span class="relative flex items-center justify-center">
+            <i class="fa-solid fa-phone text-farm-gold text-base relative z-10"></i>
+            <!-- Subtle ping on phone icon -->
+            <span class="absolute inline-flex h-4 w-4 rounded-full bg-farm-gold opacity-40 animate-ping"></span>
+        </span>
+        <span>Or call <a href="tel:+256700690045" class="text-farm-gold hover:underline font-medium">0700 690 045</a></span>
+    </div>
+</div>
+</div>
             </div>
         </div>
     </div>
+</div>
 
     <script>
         // --- MOBILE MENU LOGIC ---
