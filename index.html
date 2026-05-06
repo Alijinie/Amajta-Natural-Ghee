@@ -395,6 +395,20 @@
                 <p class="text-[10px] text-gray-500 mt-6 italic">*Delivery fee of UGX 5,000 applies to orders below UGX 100,000. Pickup available at Volcano Coffee, Nakawa, Kampala.</p>
             </div>
         </section>
+        
+        <section id="weather-map" class="glass-card p-6 rounded-lg shadow-md">
+    <h2 class="text-2xl font-semibold text-gray-200 border-b-2 border-green-700 pb-2 mb-4">Live Weather Map</h2>
+    <h2 class="text-sm text-green-500">*Search for Kampala, Entebbe, Jinja, or Gulu to view current weather conditions. For other locations, please interact with the map manually.</h2>
+    <div class="mb-4">
+        <div class="flex flex-col sm:flex-row gap-2">
+            <input type="text" id="location-search" placeholder="Enter a city (e.g., Kampala)" class="flex-grow p-2 border border-gray-600 bg-gray-700 text-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500">
+            <button id="search-btn" class="bg-green-600 text-white px-4 py-2 rounded-md hover:bg-green-700 transition-colors">Search</button>
+        </div>
+    </div>
+    <div id="weather-map-container" class="rounded-lg overflow-hidden border border-gray-700">
+        <iframe id="windy-map" src="https://embed.windy.com/embed2.html?lat=0.3136&lon=32.5811&detailLat=0.3136&detailLon=32.5811&width=650&height=450&zoom=7&level=surface&overlay=rain&product=ecmwf&menu=&message=true&marker=&calendar=now&pressure=&type=map&location=coordinates&detail=&metricWind=km%2Fh&metricTemp=%C2%B0C&radarRange=-1"></iframe>
+    </div>
+</section>
     </main>
 
     <!-- BOTTOM CTA BAR -->
