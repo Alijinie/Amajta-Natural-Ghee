@@ -409,23 +409,38 @@
         <iframe id="windy-map" src="https://embed.windy.com/embed2.html?lat=0.3136&lon=32.5811&detailLat=0.3136&detailLon=32.5811&width=650&height=450&zoom=7&level=surface&overlay=rain&product=ecmwf&menu=&message=true&marker=&calendar=now&pressure=&type=map&location=coordinates&detail=&metricWind=km%2Fh&metricTemp=%C2%B0C&radarRange=-1"></iframe>
     </div>
 </section>
+
     </main>
 
     <!-- BOTTOM CTA BAR -->
     <div class="fixed bottom-0 left-0 right-0 bg-farm-dark border-t border-white/10 py-3 px-4 z-50 md:hidden">
-        <div class="max-w-7xl mx-auto flex items-center justify-between text-sm">
+    <div class="max-w-7xl mx-auto flex items-center justify-between text-sm">
+        <!-- Left Side: Order Info & Social Link -->
+        <div class="flex items-center gap-4">
             <div>
                 <span class="font-bold text-farm-gold">Order Now</span><br>
                 <span class="text-xs text-gray-400">0700 690 045</span>
             </div>
-            <a href="https://wa.me/256700690045?text=Hello%20Amaj'ta!%20I'd%20like%20to%20order%20some%20ghee." 
-               class="bg-farm-gold text-farm-dark px-6 py-2 rounded-full text-xs font-bold flex items-center gap-2">
-                <i class="fa-brands fa-whatsapp"></i> WhatsApp
-            </a>
+            <!-- X (Twitter) Link -->
+            <a href="https://x.com/amaj_ta_ghee" 
+   target="_blank" 
+   rel="noopener noreferrer" 
+   class="text-gray-400 hover:text-farm-gold p-2 transition-colors flex items-center justify-center"
+   aria-label="Follow Amaj'ta Ghee on X">
+    <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path>
+    </svg>
+</a>
         </div>
-        <hr class="text-green-500 text-sm mt-1">
         
+        <!-- Right Side: Primary CTA -->
+        <a href="https://wa.me/256700690045?text=Hello%20Amaj'ta!%20I'd%20like%20to%20order%20some%20ghee." 
+           class="bg-farm-gold text-farm-dark px-6 py-2 rounded-full text-xs font-bold flex items-center gap-2 shrink-0">
+            <i class="fa-brands fa-whatsapp"></i> WhatsApp
+        </a>
     </div>
+    <hr class="text-green-500 text-sm mt-1">
+</div>
 
     <!-- PRODUCT MODAL -->
     <div id="product-modal" class="fixed inset-0 bg-black/80 hidden flex items-center justify-center z-50 px-4" onclick="closeModal(event)">
