@@ -415,17 +415,18 @@
         </section>
     </main>
 
-    <div class="fixed bottom-0 left-0 right-0 bg-farm-dark border-t border-white/10 py-3 px-4 z-50 md:hidden">
-        <div class="max-w-7xl mx-auto flex items-center justify-between text-sm">
-            <div class="flex items-center gap-4">
+    <footer class="hidden md:block bg-farm-dark border-t border-white/10 py-8 px-6 mt-16">
+    <div class="max-w-7xl mx-auto flex flex-col gap-6">
+        <div class="flex items-center justify-between">
+            <div class="flex items-center gap-6">
                 <div>
-                    <span class="font-bold text-farm-gold">Order Now</span><br>
-                    <span class="text-xs text-gray-400">0700 690 045</span>
+                    <span class="font-bold text-farm-gold text-base tracking-wide">Order Now</span>
+                    <p class="text-sm text-gray-400 mt-0.5">Call or Text: 0700 690 045</p>
                 </div>
                 <a href="https://x.com/amaj_ta_ghee" 
                    target="_blank" 
                    rel="noopener noreferrer" 
-                   class="text-farm-gold hover:text-farm-gold p-2 transition-colors flex items-center justify-center"
+                   class="text-gray-400 hover:text-farm-gold p-2 border border-white/10 hover:border-farm-gold/30 rounded-full transition-all flex items-center justify-center bg-white/5"
                    aria-label="Follow Amaj'ta Ghee on X">
                     <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
                         <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path>
@@ -434,13 +435,46 @@
             </div>
             
             <a href="https://wa.me/256700690045?text=Hello%20Amaj'ta!%20I'd%20like%20to%20order%20some%20ghee." 
-               class="bg-farm-gold text-farm-dark px-6 py-2 rounded-full text-xs font-bold flex items-center gap-2 shrink-0">
-                <i class="fa-brands fa-whatsapp"></i> WhatsApp
+               class="bg-farm-gold hover:bg-yellow-400 text-farm-dark px-8 py-3 rounded-full text-sm font-bold flex items-center gap-2 transition-colors shadow-lg shadow-farm-gold/10">
+                <i class="fa-brands fa-whatsapp text-lg"></i> Send Order via WhatsApp
             </a>
         </div>
-        <hr class="text-green-500 text-sm mt-1">
-         <div class="mt-auto mb-4 text-center text-gray-500 text-[11px] tracking-wide px-4">
-    &copy; 2026 Amaj'ta Natural Ghee. All rights reserved.
+        
+        <hr class="border-white/5">
+        
+        <div class="text-center text-gray-500 text-xs tracking-wide">
+            &copy; 2026 Amaj'ta Natural Ghee. All rights reserved.
+        </div>
+    </div>
+</footer>
+
+<div class="fixed bottom-0 left-0 right-0 bg-farm-dark border-t border-white/10 py-3 px-4 z-50 md:hidden">
+    <div class="max-w-7xl mx-auto flex items-center justify-between text-sm">
+        <div class="flex items-center gap-4">
+            <div>
+                <span class="font-bold text-farm-gold">Order Now</span><br>
+                <span class="text-xs text-gray-400">0700 690 045</span>
+            </div>
+            <a href="https://x.com/amaj_ta_ghee" 
+               target="_blank" 
+               rel="noopener noreferrer" 
+               class="text-farm-gold hover:text-farm-gold p-2 transition-colors flex items-center justify-center"
+               aria-label="Follow Amaj'ta Ghee on X">
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path>
+                </svg>
+            </a>
+        </div>
+        
+        <a href="https://wa.me/256700690045?text=Hello%20Amaj'ta!%20I'd%20like%20to%20order%20some%20ghee." 
+           class="bg-farm-gold text-farm-dark px-6 py-2 rounded-full text-xs font-bold flex items-center gap-2 shrink-0">
+            <i class="fa-brands fa-whatsapp"></i> WhatsApp
+        </a>
+    </div>
+    <hr class="text-green-500 text-sm mt-1">
+    <div class="mt-2 mb-1 text-center text-gray-500 text-[11px] tracking-wide px-4">
+        &copy; 2026 Amaj'ta Natural Ghee. All rights reserved.
+    </div>
 </div>
     </div>
 
